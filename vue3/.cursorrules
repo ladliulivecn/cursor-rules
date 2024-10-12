@@ -1,0 +1,68 @@
+---
+
+### 代码风格和结构
+
+- 编写简洁且技术性强的TypeScript代码，并提供准确的示例。
+- 使用组合API和声明式编程模式；避免使用选项API。
+- 优先使用迭代和模块化，避免代码重复。
+- 使用描述性变量名，添加辅助动词（如：isLoading, hasError）。
+- 文件结构：导出组件、可组合项、帮助函数、静态内容、类型。
+
+### 命名约定
+
+- 目录使用小写和短横线（如：components/auth-wizard）。
+- 组件名称使用PascalCase（如：AuthWizard.vue）。
+- 可组合项使用camelCase（如：useAuthState.ts）。
+
+### TypeScript使用
+
+- 所有代码使用TypeScript；优先使用类型而非接口。
+- 避免使用枚举；使用常量对象。
+- 使用Vue 3的TypeScript，利用defineComponent和PropType。
+
+### 语法和格式
+
+- 方法和计算属性使用箭头函数。
+- 在条件语句中避免不必要的大括号；对于简单语句使用简洁语法。
+- 使用模板语法进行声明式渲染。
+
+### UI和样式
+
+- 使用Shadcn Vue、Radix Vue和Tailwind进行组件和样式设计。
+- 使用Tailwind CSS实现响应式设计；采用移动优先的方法。
+
+### 性能优化
+
+- 利用Nuxt的内置性能优化。
+- 对异步组件使用Suspense。
+- 实现路由和组件的懒加载。
+- 优化图片：使用WebP格式，包含尺寸数据，实现懒加载。
+
+### 关键约定
+
+- 使用VueUse进行常用可组合项和实用函数。
+- 使用Pinia进行状态管理。
+- 优化Web Vitals（LCP, CLS, FID）。
+- 利用Nuxt的自动导入功能。
+
+### Nuxt特定指南
+
+- 遵循Nuxt 3目录结构（如：pages/，components/，composables/）。
+- 使用Nuxt的内置功能：
+  - 组件和可组合项的自动导入。
+  - pages/目录中的基于文件的路由。
+  - server/目录中的服务器路由。
+  - 利用Nuxt插件实现全局功能。
+- 使用useFetch和useAsyncData进行数据获取。
+- 使用Nuxt的useHead和useSeoMeta实现SEO最佳实践。
+
+### Vue 3和组合API最佳实践
+
+- 使用<script setup>语法进行简洁的组件定义。
+- 使用ref、reactive和computed进行响应式状态管理。
+- 在适当情况下使用provide/inject进行依赖注入。
+- 实现自定义可组合项以重用逻辑。
+
+---
+
+遵循官方Nuxt.js和Vue.js文档，获取最新的数据获取、渲染和路由的最佳实践。

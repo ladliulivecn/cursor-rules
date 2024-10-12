@@ -1,0 +1,100 @@
+---
+
+### 代码风格和结构
+
+- **编写简洁且技术性强的JavaScript/TypeScript代码**，并提供准确的示例。
+- **使用选项API**进行组件定义，因为uni-app目前对组合API的支持有限。
+- **优先使用迭代和模块化，避免代码重复**。
+- **使用描述性变量名**，添加辅助动词（如：isLoading, hasError）。
+- **文件结构**：导出组件、混合、帮助函数、静态内容、类型。
+
+### 命名约定
+
+- **目录使用小写和短横线**（如：components/auth-wizard）。
+- **组件名称使用PascalCase**（如：AuthWizard.vue）。
+- **混合使用camelCase**（如：authMixin.js）。
+
+### TypeScript使用
+
+- **所有代码使用TypeScript**（如果项目中决定使用TypeScript）；优先使用类型而非接口。
+- **避免使用枚举**；使用常量对象。
+
+### 语法和格式
+
+- **方法和计算属性使用常规函数**。
+- **在条件语句中避免不必要的大括号**；对于简单语句使用简洁语法。
+- **使用模板语法进行声明式渲染**。
+
+### UI和样式
+
+- 使用**自定义组件库和uni-ui**（uni-app推荐的UI组件库）进行组件和样式设计。
+- **使用uni-app的内置样式和Tailwind CSS**实现响应式设计；采用移动优先的方法。
+
+### 性能优化
+
+- **利用uni-app的内置性能优化**。
+- **实现路由和组件的懒加载**。
+- **优化图片**：使用WebP格式，包含尺寸数据，实现懒加载。
+- **使用uni-app的条件编译功能**，针对不同平台进行优化。
+
+### 关键约定
+
+- **使用Vue Mixins进行代码复用**。
+- **使用Vuex进行状态管理**（使用小程序端时，如果支持的话）。
+- **优化Web Vitals**（LCP, CLS, FID）。
+
+### uni-app特定指南
+
+- **遵循uni-app的项目结构**（pages/，components/，store/）。
+- **使用uni-app提供的API进行平台交互**（如网络请求、存储等）。
+- **使用uni-app的生命周期钩子**（如onLaunch, onShow）。
+- **实现SEO**时，配合第三方工具或后端渲染（如uniCloud）。
+
+### uni-app最佳实践
+
+- **使用data, computed, methods进行状态管理**。
+- **使用watch进行数据监听**。
+- **在适当情况下使用provide/inject进行依赖注入**。
+- **实现混合以重用逻辑**。
+
+### 示例代码
+
+```javascript
+// pages/index/index.vue
+<template>
+  <view>
+    <text>{{ message }}</text>
+  </view>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello, uni-app!'
+    }
+  }
+}
+</script>
+
+<style scoped>
+/* 使用uni-app的内置样式类 */
+text {
+  color: red;
+}
+</style>
+```
+
+### 小程序优化建议
+
+- **使用uni-app提供的uni.request进行网络请求**。
+- **使用uni.showLoading和uni.hideLoading进行加载提示**。
+- **使用uni.navigateTo进行页面跳转**。
+
+---
+
+### 参考资料
+
+- [uni-app官方文档](https://uniapp.dcloud.net.cn/)
+- [Vue 2官方文档](https://vuejs.org/v2/guide/)
+- [TypeScript官方文档](https://www.typescriptlang.org/docs/)
