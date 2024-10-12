@@ -1,0 +1,104 @@
+---
+
+### 代码风格和结构
+
+- **编写简洁且技术性强的JavaScript代码**，并提供准确的示例。
+- **使用模块化和组件化**，避免代码重复。
+- **使用描述性变量名**，添加辅助动词（如：isLoading, hasError）。
+- **文件结构**：将页面、组件、样式、静态资源、公共函数和配置文件分开管理。
+
+### 命名约定
+
+- **目录使用小写和短横线**（如：pages/auth-wizard）。
+- **组件名称使用PascalCase**（如：AuthWizard）。
+- **变量和函数使用camelCase**（如：fetchUserData）。
+
+### JavaScript使用
+
+- **所有代码使用ES6+**标准。
+- **避免使用全局变量**；使用模块导入导出机制（如CommonJS）。
+- **使用async/await处理异步代码**，提高代码可读性。
+
+### 语法和格式
+
+- **方法和计算属性使用常规函数**。
+- **在条件语句中避免不必要的大括号**；对于简单语句使用简洁语法。
+- **使用模板语法进行声明式渲染**。
+
+### UI和样式
+
+- **使用微信小程序原生的WXML和WXSS**进行UI开发。
+- **使用BEM命名法**进行样式管理，确保样式的可维护性。
+- **使用自定义组件**进行UI组件化。
+
+### 性能优化
+
+- **利用微信小程序的内置性能优化**。
+- **实现路由和组件的懒加载**。
+- **优化图片**：使用WebP格式，包含尺寸数据，实现懒加载。
+- **使用分包加载**，减少初次加载时间。
+
+### 关键约定
+
+- **使用混合（Mixin）进行代码复用**。
+- **使用微信小程序的全局数据管理（如App对象和Page对象）**。
+- **优化Web Vitals**（LCP, CLS, FID）。
+
+### 微信小程序特定指南
+
+- **遵循微信小程序的项目结构**（pages/，components/，utils/，styles/）。
+- **使用微信小程序提供的API进行平台交互**（如网络请求、存储等）。
+- **使用微信小程序的生命周期钩子**（如onLoad, onShow）。
+- **实现SEO**时，配合第三方工具或后端渲染。
+
+### 微信小程序最佳实践
+
+- **使用data, computed, methods进行状态管理**。
+- **使用watch进行数据监听**。
+- **在适当情况下使用provide/inject进行依赖注入**。
+- **实现混合以重用逻辑**。
+
+### 示例代码
+
+```javascript
+// pages/index/index.js
+Page({
+  data: {
+    message: 'Hello, WeChat Mini Program!'
+  },
+  onLoad() {
+    // 页面加载时的操作
+    this.setData({
+      message: 'Hello, WeChat Mini Program!'
+    });
+  }
+});
+```
+
+```html
+<!-- pages/index/index.wxml -->
+<view>
+  <text>{{message}}</text>
+</view>
+```
+
+```css
+/* pages/index/index.wxss */
+text {
+  color: red;
+}
+```
+
+### 小程序优化建议
+
+- **使用wx.request进行网络请求**。
+- **使用wx.showLoading和wx.hideLoading进行加载提示**。
+- **使用wx.navigateTo进行页面跳转**。
+- **利用setData进行页面数据更新，但需避免频繁调用**。
+- **使用WXS（WeChat Script）进行复杂逻辑处理，提升性能**。
+
+### 参考资料
+
+- [微信小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)
+- [JavaScript ES6入门教程](https://es6.ruanyifeng.com/)
+- [BEM命名法](http://getbem.com/)
