@@ -1,0 +1,89 @@
+### 代码风格和结构
+
+- 编写干净、高效且文档齐全的Java代码，并附上准确的Spring Boot示例。
+- 在代码中使用Spring Boot的最佳实践和约定。
+- 创建Web服务时，遵循RESTful API设计模式。
+- 使用描述性的变量和方法名，遵循驼峰命名法。
+- 结构化Spring Boot应用：控制器（controllers）、服务（services）、仓库（repositories）、模型（models）、配置（configurations）。
+
+### Spring Boot 特定要求
+
+- 使用Spring Boot Starters进行快速项目设置和依赖管理。
+- 正确使用注解（例如：@SpringBootApplication, @RestController, @Service）。
+- 有效利用Spring Boot的自动配置功能。
+- 使用@ControllerAdvice和@ExceptionHandler实现正确的异常处理。
+
+### 命名约定
+
+- 类名使用帕斯卡命名法（例如：UserController, OrderService）。
+- 方法和变量名使用驼峰命名法（例如：findUserById, isOrderValid）。
+- 常量使用全大写命名（例如：MAX_RETRY_ATTEMPTS, DEFAULT_PAGE_SIZE）。
+
+### Java 和 Spring Boot 使用
+
+- 在适用时使用Java 17或更高版本的特性（例如：records, sealed classes, pattern matching）。
+- 利用Spring Boot 3.x的特性和最佳实践。
+- 对数据库操作使用Spring Data JPA。
+- 使用Bean Validation（例如：@Valid, 自定义验证器）实现正确的验证。
+
+### 配置和属性
+
+- 使用application.properties或application.yml进行配置。
+- 使用Spring Profiles实现环境特定的配置。
+- 使用@ConfigurationProperties实现类型安全的配置属性。
+
+### 依赖注入和IoC
+
+- 优先使用构造器注入而非字段注入以提高可测试性。
+- 利用Spring的IoC容器管理bean生命周期。
+
+### 测试
+
+- 使用JUnit 5和Spring Boot Test编写单元测试。
+- 使用MockMvc测试Web层。
+- 使用@SpringBootTest实现集成测试。
+- 对仓库层测试使用@DataJpaTest。
+
+### 性能和可扩展性
+
+- 使用Spring Cache抽象实现缓存策略。
+- 使用@Async进行异步处理，实现非阻塞操作。
+- 实现正确的数据库索引和查询优化。
+
+### 安全
+
+- 使用Spring Security进行认证和授权。
+- 使用正确的密码编码（例如：BCrypt）。
+- 在需要时实现CORS配置。
+
+### 日志和监控
+
+- 使用SLF4J和Logback进行日志记录。
+- 实现正确的日志级别（ERROR, WARN, INFO, DEBUG）。
+- 使用Spring Boot Actuator进行应用监控和指标收集。
+
+### API 文档
+
+- 使用Springdoc OpenAPI（前称Swagger）生成API文档。
+
+### 数据访问和ORM
+
+- 对数据库操作使用Spring Data JPA。
+- 实现正确的实体关系和级联操作。
+- 使用Flyway或Liquibase进行数据库迁移。
+
+### 构建和部署
+
+- 使用Maven进行依赖管理和构建过程。
+- 为不同环境（开发、测试、生产）实现正确的配置。
+- 在适用时使用Docker进行容器化。
+
+### 遵循最佳实践
+
+- 遵循RESTful API设计（正确使用HTTP方法、状态码等）。
+- 若适用，采用微服务架构。
+- 使用Spring的@Async或Spring WebFlux进行异步处理。
+
+遵循SOLID原则，保持Spring Boot应用设计中的高内聚和低耦合。
+
+--- 
